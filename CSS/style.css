@@ -1,6 +1,12 @@
 *{
     margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+
+/* Inicio Header */
+
 header{
     background-color: #353a40;
 
@@ -54,10 +60,7 @@ header{
     color: #29a345;
 }
 
-/* Inicio Navbar */
-
-
-/* Fin Navbar */
+/* Fin Header */
 
 .main-imagenes{
     position: relative;
@@ -231,6 +234,74 @@ form p{
     color: white;
 }
 
+/* inicio Main de tickets.html */
+/* Cards */
+.row{
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+.card {
+    text-align: center;
+    
+}
+.col{
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+.incompleto {
+    color: red;
+    font-size: x-small;
+    margin-left: 8px;
+    margin-bottom: 0;
+    padding: 0;
+}
+.estudiante{
+    border-color: #047dfe;
+}
+.trainee {
+    border-color: #96d5df;  
+}
+.junior {
+    border-color: #ffc10a;
+}
+.title-ventas{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.col-form{
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+.form-large .form-control{
+    margin-right: 18px;
+    margin-left: 8px;
+
+}
+.form-large{
+    padding-left: 2px;
+    padding-right: 14px;
+}
+
+.col h6{
+    padding-left: 10px;
+}
+.total{
+    margin: 20px 0;
+    background-color: #cce5ff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.btn-ticket{
+    background-color: #97c93e;
+    color: white;
+    width: 100%;
+    margin-bottom: 20px;
+}
+/* fin de main tickets.html */
 footer{
     background-color: #1d3947;
     margin: 0px;
