@@ -23,7 +23,7 @@ function cleanUp(){
 function dataInput(){
 
     validateDate();
-    if (validateDate()){
+    if (validateDate() == true){
         calcular ();
     }
 
@@ -34,6 +34,7 @@ function validateDate(){
     categValue = categoria.value; // Esto los utilizo para la validacion de la categoria. Por que solo me pide estas dos dentro de la funcion?
     if (nombre.value == ''){
         document.getElementById('completar-nombre').innerHTML = '*Completar nombre'
+        validacion[0] = false;
     }else{
         document.getElementById('completar-nombre').innerHTML = '';
         validacion[0] = true
@@ -41,6 +42,7 @@ function validateDate(){
 
     if (apellido.value == ''){
         document.getElementById('completar-apellido').innerHTML = '*Completar apellido';
+        validacion[1] = false;
     }else{
         document.getElementById('completar-apellido').innerHTML = '';
         validacion[1] = true;
@@ -48,6 +50,7 @@ function validateDate(){
 
     if (email.value == ''){
         document.getElementById('completar-email').innerHTML = '*Completar correo';
+        validacion[2] = false;
     }else{
         document.getElementById('completar-email').innerHTML = '';
         validacion[2] = true;
@@ -55,14 +58,17 @@ function validateDate(){
 
     if (cantidad.value < 1) {
         document.getElementById('completar-cantidad').innerHTML = '*La cantidad debe ser un numero entero mayor que 0 (cero)';
+        validacion[3] = false;
     }else {
         document.getElementById('completar-cantidad').innerHTML = '';
+        let cantidadInt = Math.trunc(Number(cantidad.value));
+        cantidad.value = cantidadInt
         validacion[3] = true
     }
-
     
     if (categoria.value == "elegir categoria") {
         document.getElementById('completar-categoria').innerHTML = '*Elegir categoria';
+        validacion[4] = false;
     }else {
         document.getElementById('completar-categoria').innerHTML = '';
         validacion[4] = true;
@@ -70,6 +76,8 @@ function validateDate(){
     
     if (validacion[0] == true & validacion[1] == true & validacion[2] == true & validacion[3] == true & validacion[4] == true){
         return true
+    }else{
+        document.getElementById('total-pagar').innerHTML = 'Total a pagar = $';
     }
 }
 
